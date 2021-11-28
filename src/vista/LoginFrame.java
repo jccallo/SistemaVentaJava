@@ -34,6 +34,7 @@ public class LoginFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 

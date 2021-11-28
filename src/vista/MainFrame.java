@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
-/**
- *
- * @author Armando Morales
- */
+import java.awt.Dimension;
+import javax.swing.JInternalFrame;
+
 public class MainFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MainFrame
-     */
     public MainFrame() {
         initComponents();
+        
+        // para que ocupe la pantalla commpleta
+        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -27,22 +21,160 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        principalFrame = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        itemMenu = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        itemSalir = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        itemGenerarVenta = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        itemCliente = new javax.swing.JMenuItem();
+        itemProducto = new javax.swing.JMenuItem();
+        itemVendedor = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout principalFrameLayout = new javax.swing.GroupLayout(principalFrame);
+        principalFrame.setLayout(principalFrameLayout);
+        principalFrameLayout.setHorizontalGroup(
+            principalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        principalFrameLayout.setVerticalGroup(
+            principalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 261, Short.MAX_VALUE)
+        );
+
+        itemMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_bulleted_list_32px.png"))); // NOI18N
+        itemMenu.setText("Menu");
+        itemMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemMenuActionPerformed(evt);
+            }
+        });
+
+        jMenuItem1.setText("Ayuda");
+        itemMenu.add(jMenuItem1);
+
+        itemSalir.setText("Salir");
+        itemSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemSalirActionPerformed(evt);
+            }
+        });
+        itemMenu.add(itemSalir);
+
+        jMenuBar1.add(itemMenu);
+
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_shopping_cart_32px.png"))); // NOI18N
+        jMenu2.setText("Ventas");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
+
+        itemGenerarVenta.setText("Generar Venta");
+        itemGenerarVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemGenerarVentaActionPerformed(evt);
+            }
+        });
+        jMenu2.add(itemGenerarVenta);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_maintenance_32px.png"))); // NOI18N
+        jMenu3.setText("Mantenimiento");
+
+        itemCliente.setText("Cliente");
+        itemCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemClienteActionPerformed(evt);
+            }
+        });
+        jMenu3.add(itemCliente);
+
+        itemProducto.setText("Producto");
+        itemProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemProductoActionPerformed(evt);
+            }
+        });
+        jMenu3.add(itemProducto);
+
+        itemVendedor.setText("Vendedor");
+        itemVendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemVendedorActionPerformed(evt);
+            }
+        });
+        jMenu3.add(itemVendedor);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_increase_32px.png"))); // NOI18N
+        jMenu4.setText("Reportes");
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(principalFrame)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(principalFrame)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void itemMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemMenuActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void itemGenerarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemGenerarVentaActionPerformed
+        VentaForm ventaForm = new VentaForm();
+        centrarVentana(ventaForm);
+    }//GEN-LAST:event_itemGenerarVentaActionPerformed
+
+    private void itemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_itemSalirActionPerformed
+
+    private void itemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemClienteActionPerformed
+        ClienteForm clienteForm = new ClienteForm();
+        centrarVentana(clienteForm);
+    }//GEN-LAST:event_itemClienteActionPerformed
+
+    private void itemProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemProductoActionPerformed
+        ProductoForm productoForm = new ProductoForm();
+        centrarVentana(productoForm);
+    }//GEN-LAST:event_itemProductoActionPerformed
+
+    private void itemVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemVendedorActionPerformed
+        VendedorForm vendedorForm = new VendedorForm();
+        centrarVentana(vendedorForm);
+    }//GEN-LAST:event_itemVendedorActionPerformed
+
+    void centrarVentana(JInternalFrame internoFrame) {
+        principalFrame.add(internoFrame);
+        Dimension dPrincipalFrame = principalFrame.getSize();
+        Dimension dInternoFrame = internoFrame.getSize();
+        internoFrame.setLocation((dPrincipalFrame.width - dInternoFrame.height) / 2, (dPrincipalFrame.height - dInternoFrame.width) / 2);
+        internoFrame.show();
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -79,5 +211,17 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itemCliente;
+    private javax.swing.JMenuItem itemGenerarVenta;
+    private javax.swing.JMenu itemMenu;
+    private javax.swing.JMenuItem itemProducto;
+    private javax.swing.JMenuItem itemSalir;
+    private javax.swing.JMenuItem itemVendedor;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JDesktopPane principalFrame;
     // End of variables declaration//GEN-END:variables
 }
