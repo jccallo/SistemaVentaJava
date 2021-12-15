@@ -167,6 +167,7 @@ public class MainFrame extends javax.swing.JFrame {
         centrarVentana(vendedorForm);
     }//GEN-LAST:event_itemVendedorActionPerformed
 
+    // centrar ventana
     void centrarVentana(JInternalFrame internoFrame) {
         principalFrame.add(internoFrame);
         Dimension dPrincipalFrame = principalFrame.getSize();

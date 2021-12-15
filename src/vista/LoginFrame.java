@@ -2,11 +2,11 @@ package vista;
 
 import javax.swing.JOptionPane;
 import modelo.Vendedor;
-import modelo.VendedorDAO;
+import modelo.VendedorDao;
 
 public class LoginFrame extends javax.swing.JFrame {
     // creamos los objetos que vamos a utilizar
-    VendedorDAO vendedorDAO = new VendedorDAO();
+    VendedorDao vendedorDao = new VendedorDao();
     Vendedor vendedor = new Vendedor();
     
     public LoginFrame() {
@@ -120,7 +120,7 @@ public class LoginFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Debe ingresar datos en la caja de texto");
             txtUsuario.requestFocus();
         } else {
-            vendedor = vendedorDAO.validar(dni, usuario);
+            vendedor = vendedorDao.validar(dni, usuario);
             if (vendedor.getDni() == null && vendedor.getUsuario() == null) {
                 JOptionPane.showMessageDialog(this, "Debe ingresar usuarios validos");
                 txtUsuario.requestFocus();
